@@ -1,0 +1,331 @@
+@font-face {
+	font-family: 'Raleway';
+	src: url('../fonts/raleway/Raleway-Regular.ttf');
+}
+@font-face {
+	font-family: 'Raleway-Ex-Light';
+	src: url('../fonts/raleway/Raleway-ExtraLight.ttf');
+}
+@font-face {
+	font-family: 'Raleway-Medium';
+	src: url('../fonts/raleway/Raleway-Medium.ttf');
+}
+@font-face {
+	font-family: 'Raleway-Light';
+	src: url('../fonts/raleway/Raleway-Light.ttf');
+}
+@font-face {
+	font-family: 'Chuck';
+	src: url('../fonts/chuck-noon/ChuckNoon.ttf');
+	src: url('../fonts/chuck-noon/ChuckNoon.otf');
+}
+body{
+	font-family: Raleway-Medium;
+}
+a {
+	color: #000;
+}
+input, textarea {
+	width: 50%;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: Chuck;
+}
+/*::-webkit-input-placeholder {
+   font-family: Raleway-Ex-Light;
+}:-moz-placeholder { 
+   font-family: Raleway-Ex-Light;  
+}::-moz-placeholder {  
+   font-family: Raleway-Ex-Light;
+}:-ms-input-placeholder {  
+   font-family: Raleway-Ex-Light;
+}*/
+.theme-color { 
+	color: #BB1122;
+}
+.theme-bg-color {
+	background-color: ;
+}
+.page-wrap {
+	padding-top: 6vw;
+}
+.add-form {
+	margin-top: 2vw;
+}
+.add-form>.row {
+	margin: 1vw;
+}
+.button {
+	padding: 1vw;
+	width: 30%;
+	border-radius: 0px;
+	border: 0px;
+	background-color: #4CAF50;
+}
+.loader {
+	margin: 30px 0px; 
+}
+.add{
+	background-color: #cacaca;
+}
+.add-input {
+	width: auto;
+	height: 28px;
+    margin: 10px 0px 10px 5px;
+}
+.add-button{
+	padding: 4px;
+	width: auto;
+	border-radius: 0px;
+	border: 0px;
+	background-color: #4CAF50;
+	float: right;
+	margin: 10px 5px 0px;
+}
+.header {
+	background-color: #BB1122; 
+	width: 100%;
+	position: fixed;
+	height: 6vw;
+	z-index: 2;
+}
+.footer{
+	background-color: #BB1122;
+	color: #000;
+	width: 100%;
+	height: 6vw;
+	padding: 2vw;
+}
+.add-head {
+	margin-bottom: 4vw;
+}
+.no-padding {
+	padding: 0px;
+}
+.no-margin {
+	margin: 0px;
+}
+.index-content{
+	padding-top: 20px;
+}
+.width-full{
+	width: 100%;
+}
+.main-full {
+	
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    height:605px;
+}
+.full {
+	background: url('http://wallpoper.com/images/00/40/74/09/black-minimalistic_00407409.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    height:605px;
+}
+.left {
+	border: 1px solid #cacaca;
+	height: calc(605px/3);
+	margin: 0px;
+	text-align: center;
+}
+.carousel {
+	height:auto;
+}
+.right {
+	border: 1px solid #cacaca;
+	height: calc(605px/2);
+	margin: 0px;
+	text-align: center;
+}
+.menu-bars {
+	margin-left:2vw;
+	font-size: 20px;
+	margin-top: 2vw;
+	cursor: pointer;
+}
+.close {
+	padding-right: 1vw;
+	color: white;
+	margin-top: -1vw;
+	top: 0px;
+}
+.menuLinks {
+	position: fixed;
+	top: 0;
+	right: 0px;
+	background: rgba(0, 0, 0, 0.9);
+	width: 20vw;
+	height: 100%;
+	z-index: 999;
+	padding: 10px 0 0 0
+}.menuLinks li {
+	list-style: none;
+	width: 100%;
+}.menuLinks li a {
+	margin-left: 20px;
+	color: white;
+	display: block;
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 38px;
+	text-transform: uppercase;
+}.menuLinks li a:hover {
+	color: #888;
+}
+.add-store {
+	margin-top: -1vw;
+}
+.product-head{
+	background-color: #cacaca;
+	font-size:18px;
+	padding: 10px;
+}
+.product-list{
+	background-color: #fff;
+	color: #000;
+	font-weight: bold;	
+	border-bottom: 1px solid #cacaca;
+	margin-left: -40px;
+	padding: 10px;
+}
+.products{
+	width: 100%;
+	border: 1px solid #cacaca;
+}
+.list-style{
+	list-style: none;
+	position: relative;
+	margin: 0px;
+}
+.width-10{
+	width: 10%;
+}
+.bottom-20{
+	margin-bottom: 20px;
+}
+.pointer{
+	cursor: pointer;
+}
+.listing-box{
+	width:100%;
+	height:300px;
+	border: 1px solid #cacaca;
+	margin: 30px 0px; 
+}
+.listimage{
+	width: 100%;
+	height: 200px;
+}
+.m-app-loading {
+	position: fixed ;
+}
+.m-app-loading .animated-container {
+	background-color: #333333 ;
+	bottom: 0px ;
+	left: 0px ;
+	 opacity: 1.0 ;
+	position: fixed ;
+	right: 0px ;
+	top: 0px ;
+	z-index: 999999 ;
+}
+.m-app-loading .animated-container.ng-leave {
+	opacity: 1.0 ;
+	transition: all linear 200ms ;
+	    -webkit-transition: all linear 200ms ;
+}
+.m-app-loading .animated-container.ng-leave-active {
+	opacity: 0 ;
+}
+.m-app-loading .messaging {
+	color: #FFFFFF ;
+	font-family: monospace ;
+	left: 0px ;
+	margin-top: -37px ;
+	position: absolute ;
+	right: 0px ;
+	text-align: center ;
+	top: 50% ;
+}
+.m-app-loading h1 {
+	font-size: 26px ;
+	line-height: 35px ;
+	margin: 0px 0px 20px 0px ;
+}
+.m-app-loading p {
+	font-size: 18px ;
+	line-height: 14px ;
+	margin: 0px 0px 0px 0px ;
+}
+#map {
+  height: 100%;
+}
+.controls {
+  margin-top: 10px;
+  border: 1px solid transparent;
+  border-radius: 2px 0 0 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  height: 32px;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+#pac-input {
+  background-color: #fff;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  margin-left: 12px;
+  padding: 0 11px 0 13px;
+  text-overflow: ellipsis;
+  width: 300px;
+}
+#pac-input:focus {
+  border-color: #4d90fe;
+}
+.pac-container {
+  font-family: Roboto;
+}
+#type-selector {
+  color: #fff;
+  background-color: #4d90fe;
+  padding: 5px 11px 0px 11px;
+}
+
+#type-selector label {
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 300;
+}
+#target {
+  width: 345px;
+}
+.map #googleMap {
+  min-height: 200px;
+}
+.no-stores{
+	margin:139px 0px;
+}
+.cover-image {
+	width: 100%;
+	height: 100%;
+}
+.description {
+	font-family:Raleway-Medium;
+	font-style: italic;
+	color: #cacaca;
+}
+.productsList{
+	margin:10px;
+	font-weight: bold;
+	color: #cacaca;
+}
+.bind{
+	background-color: white;
+	width: 100%;
+}

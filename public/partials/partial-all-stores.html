@@ -1,0 +1,26 @@
+<div class="container" ng-controller="storeCtrl">
+	<div class="row" >
+		<center>
+			<div ng-show='load'>
+	    		<img class="loader" src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif" />
+	    	</div>
+		</center>
+    	
+		<div ng-hide='load'>
+			<!-- <div ng-show='!value' class="no-stores">
+				<h1 class="text-center">NO Stores available in Database</h1>
+			</div>
+			<div ng-show='value'> -->
+				<div class="col-md-4 col-sm-6 col-xs-12" ng-repeat="x in value">
+						<div class="listing-box">
+							<div ui-sref="store({ id: '{{ x.id }}' })" ng-click='storeDetail(x.Details.Name)'>
+								<img src="data:{{x.Details.Cover.filetype}};base64,{{x.Details.Cover.base64}}" class="img-responsive listimage" alt='Image'><br> 
+								<div class="text-center">
+								<h2 class="text-center">{{ x.Details.Name }}</h2>
+								</div>
+							</div>
+						</div>
+				</div>
+		</div>
+	</div>
+</div>

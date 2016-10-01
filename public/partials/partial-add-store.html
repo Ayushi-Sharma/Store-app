@@ -1,0 +1,99 @@
+<div ng-controller='storeCtrl'>
+  	<div class="container add-form">
+  		<h3 class="text-center add-head">Enter Details of Your Store</h3>
+		<div class="row">
+			<div class="col-md-4 col-sm-4 col-lg-4 col-xs-4">
+				<label class="pull-right"> Name :</label> 
+			</div>
+			<div class="col-md-8 col-sm-8 col-lg-8 col-xs-8">
+				 <input type="text" ng-model="addName">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4 col-sm-4 col-lg-4 col-xs-4">
+				<label class="pull-right">Description : </label> 
+			</div>
+			<div class="col-md-8 col-sm-8 col-lg-8 col-xs-8">
+				 <textarea ng-model="aboutUs"></textarea>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4 col-sm-4 col-lg-4 col-xs-4">
+				<label class="pull-right">Location : </label> 
+			</div>
+			<div class="col-md-8 col-sm-8 col-lg-8 col-xs-8">
+	    		<input type="text" id='autocomplete' ng-model="location">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4 col-sm-4 col-lg-4 col-xs-4">
+	            <label class="pull-right">Cover Photo</label>
+	       	</div>
+	       	<div class="col-md-4 col-sm-4 col-lg-4 col-xs-4">
+	       		<input type="file" class="pull-left width-full" id="coverPhoto" name="coverPhoto" ng-model='coverPhoto' base-sixty-four-input/>
+	       	</div>
+	       	<!-- <div class="col-md-4 col-sm-4 col-lg-4 col-xs-4">
+	       		<button  type="submit" class="button width-full" ng-click="uploadCoverPhoto(coverPhoto)">
+		            	Upload 
+		        </button>
+	       	</div> -->
+		</div>
+		<div class="row">
+			<div class="col-md-4 col-sm-4 col-lg-4 col-xs-4">
+	            <label class="pull-right">Upload Photos</label>
+	       	</div>
+	       	<div class="col-md-4 col-sm-4 col-lg-4 col-xs-4">
+	       		<input type="file" class="pull-left width-full" id="userPhoto" name="userPhoto" ng-model='userPhoto' base-sixty-four-input multiple /> 
+	       	</div>
+	       	<!-- <div class="col-md-4 col-sm-4 col-lg-4 col-xs-4">
+	       		<button  type="submit" class="button width-full" ng-click="uploadPhotos(userPhoto)">
+		            	Upload 
+		        </button>
+	       	</div> -->
+		</div>
+		<div class="row">
+			<div class="col-md-4 col-sm-4 col-lg-4 col-xs-4">
+				<label class="pull-right"> Store Timings :</label>
+			</div>
+			<div class="col-md-8 col-sm-8 col-lg-8 col-xs-8">
+	    		<input type="time" ng-model='timingFrom'>
+	    		<input type="time" ng-model='timingTo'>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4 col-sm-4 col-lg-4 col-xs-4">
+				<label class="pull-right">Add Products </label>
+			</div>
+			<div class="col-md-4 col-sm-4 col-lg-4 col-xs-4">
+				<div class="products">
+					<h5 class="product-head no-margin">List of Products</h5>
+					<ul class="list-style">
+						<li ng-repeat="x in products" class="product-list">
+							<span class="">{{x}}</span>
+							<span class="pull-right pointer" ng-click="removeItem($index)">
+								x
+							</span>
+						</li>
+					</ul>
+					<div class="add">
+						<input type="text" class="add-input" ng-model="productName">
+						<button class="add-button" ng-click="addProduct()">
+							Add
+						</button>
+						<span>
+							{{error}}
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-4 col-lg-4 col-xs-4"></div>
+		</div>
+		<div class="row">
+			<center>
+				<button class="button bottom-20" ng-click="addStore(addName, aboutUs, location, products,timingFrom,timingTo,coverPhoto, userPhoto)">
+					Add Store
+				</button>
+			</center>
+		</div>
+	</div>
+</div>

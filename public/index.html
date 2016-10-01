@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="icon" href="icons/Gram-Power-logo.png">
+	<title> Gram Power </title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="css/styles.css" />
+	
+</head>
+<body ng-app='app'>
+	<nav id="mainNav" ng-controller='homeCtrl'>
+	  <div class="header">
+	  	<i class="menu-bars fa fa-bars" ng-click="custom=!custom"> MENU </i>
+	  </div>
+		<ul class="menuLinks" ng-hide="custom">
+				<a class="pull-right close" ng-click="custom=!custom">x</a>
+			    <li class="active" id="firstLink"><a href='#' class="scroll-link">Home</a></li>
+			    <li><a ui-sref="stores-add" class="scroll-link">Add a Store</a></li>
+			    <li><a ui-sref="all-stores" class="scroll-link">View all Stores</a></li>
+		</ul>
+	</nav>
+	<div ui-view class="page-wrap">
+	        <div class="container-fluid">
+				<div class="row">
+					<div class="main-full">
+						<h3 class="no-margin index-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. </h3>
+					</div>
+				</div>
+			</div>
+	</div>
+			<footer class="footer">
+				<h5 class="text-center"> &copy 2016 Proudly Created by Ayushi Sharma</h5>
+			</footer>
+
+	<script type="text/javascript" src='https://code.jquery.com/jquery-3.1.1.min.js'></script>
+	<script type="text/javascript" src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+  <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js'></script>
+  <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js'></script>
+  <script type="text/javascript" src='js/angular-base64-upload.min.js'></script>
+  <script type="text/javascript" src='js/jquery.imagedrag.min.js'></script>
+	<script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/3.4.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/3.4.0/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/3.4.0/firebase-database.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIU9QKj4fEVewiyTKNRt7fUJKiVES3Irg&libraries=places"></script>
+  <script type="text/javascript" src='js/main.js'></script>
+  <script type="text/javascript" src='js/jquery.js'></script>
+	<!-- <script>
+        function init_map(){var myOptions = {zoom:14,center:new google.maps.LatLng(26.894385,75.82888700000001),
+          mapTypeId: google.maps.MapTypeId.ROADMAP};
+        map = new google.maps.Map(document.getElementById("googleMap"), myOptions);
+        marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(26.894385, 75.82888700000001)});
+        infowindow = new google.maps.InfoWindow({content:"<b>{{detail.Details.Name}}</b><br/>{{detail.Details.Location}}<br/>" });
+        google.maps.event.addListener(marker, "click", function(){infowindow.open(map,marker);});
+        infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);
+  </script> -->
+  <script>
+		var config = {
+		    apiKey: "AIzaSyBaDFc5tjkGedptCrsSv__7W7OGaWVKfns",
+		    authDomain: "grampower-7f026.firebaseapp.com",
+		    databaseURL: "https://grampower-7f026.firebaseio.com",
+		    storageBucket: "",
+		    messagingSenderId: "442903365753"
+		};
+		firebase.initializeApp(config);
+	</script>
+	<!-- <script>
+      // This example adds a search box to a map, using the Google Place Autocomplete
+      // feature. People can enter geographical searches. The search box will return a
+      // pick list containing a mix of places and predicted search terms.
+
+      // This example requires the Places library. Include the libraries=places
+      // parameter when you first load the API. For example:
+      // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+
+      function initAutocomplete() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -33.8688, lng: 151.2195},
+          zoom: 13,
+          mapTypeId: 'roadmap'
+        });
+
+        // Create the search box and link it to the UI element.
+        var input = document.getElementById('pac-input');
+        var searchBox = new google.maps.places.SearchBox(input);
+        map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+        // Bias the SearchBox results towards current map's viewport.
+        map.addListener('bounds_changed', function() {
+          searchBox.setBounds(map.getBounds());
+        });
+
+        var markers = [];
+        // Listen for the event fired when the user selects a prediction and retrieve
+        // more details for that place.
+        searchBox.addListener('places_changed', function() {
+          var places = searchBox.getPlaces();
+
+          if (places.length == 0) {
+            return;
+          }
+
+          // Clear out the old markers.
+          markers.forEach(function(marker) {
+            marker.setMap(null);
+          });
+          markers = [];
+
+          // For each place, get the icon, name and location.
+          var bounds = new google.maps.LatLngBounds();
+          places.forEach(function(place) {
+            if (!place.geometry) {
+              console.log("Returned place contains no geometry");
+              return;
+            }
+            var icon = {
+              url: place.icon,
+              size: new google.maps.Size(71, 71),
+              origin: new google.maps.Point(0, 0),
+              anchor: new google.maps.Point(17, 34),
+              scaledSize: new google.maps.Size(25, 25)
+            };
+
+            // Create a marker for each place.
+            markers.push(new google.maps.Marker({
+              map: map,
+              icon: icon,
+              title: place.name,
+              position: place.geometry.location
+            }));
+
+            if (place.geometry.viewport) {
+              // Only geocodes have viewport.
+              bounds.union(place.geometry.viewport);
+            } else {
+              bounds.extend(place.geometry.location);
+            }
+          });
+          map.fitBounds(bounds);
+        });
+      }
+
+    </script> -->
+</body>
+</html>
