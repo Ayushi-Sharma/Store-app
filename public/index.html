@@ -31,6 +31,68 @@
 					</div>
 				</div>
 			</div>
+      <div>
+      <!-- ABOUT US SECTION -->
+      <section id="about">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 col-md-12">
+              <div class="about_area">
+                <!-- START ABOUT HEADING -->
+                <div class="heading">
+                  <h2 class="wow fadeInLeftBig">About Us</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus.</p>
+                </div>
+              </div>
+            </div>
+            </div>
+        </div>
+      </section>
+
+      <!-- CONTACT US SECTION -->
+      <section id="contact" >
+      <div class="container">
+        <div class="row" >
+             
+          <div class="col-lg-12 col-md-12 col-sm-12">
+              
+            <!-- START CONTACT HEADING -->
+            <div class="heading">
+              <h2 class="wow fadeInLeftBig">Contact Us</h2>
+              <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don"\'"t look even slightly believable. </p>
+            </div>
+          </div>
+        </div>       
+        <div class="row" >
+          <!-- BEGIN CONTACT CONTENT -->
+          <div class="contact_content">
+            <!-- BEGIN CONTACT FORM -->
+            <div class="col-lg-6 col-md-6 col-sm-6">
+              <div class="map">
+                <div id="googleMap"></div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6">
+              <div class="contact_form">
+
+                <!-- FOR CONTACT FORM MESSAGE -->
+                <div id="form-messages"></div>
+
+                <form style="width:397px;">
+                  <input class="form-control" type="text" placeholder="Name">
+                  <input class="form-control" type="email" placeholder="Email">
+                  <input class="form-control" type="text" placeholder="Subject">                  
+                  <textarea class="form-control" cols="30" rows="10" placeholder="Your Message"></textarea>
+                   <input class="submit_btn" type="submit" value="Send" style="margin-left:161px;">  
+                </form>
+              </div>
+            </div>
+                  
+          </div>
+        </div>      
+      </div>             
+    </section>
+    </div>
 	</div>
 			<footer class="footer">
 				<h5 class="text-center"> &copy 2016 Proudly Created by Ayushi Sharma</h5>
@@ -40,6 +102,7 @@
 	<script type="text/javascript" src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
   <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js'></script>
   <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js'></script>
+  <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js'></script>
   <script type="text/javascript" src='js/angular-base64-upload.min.js'></script>
   <script type="text/javascript" src='js/jquery.imagedrag.min.js'></script>
 	<script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
@@ -49,15 +112,15 @@
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIU9QKj4fEVewiyTKNRt7fUJKiVES3Irg&libraries=places"></script>
   <script type="text/javascript" src='js/main.js'></script>
   <script type="text/javascript" src='js/jquery.js'></script>
-	<!-- <script>
-        function init_map(){var myOptions = {zoom:14,center:new google.maps.LatLng(26.894385,75.82888700000001),
-          mapTypeId: google.maps.MapTypeId.ROADMAP};
-        map = new google.maps.Map(document.getElementById("googleMap"), myOptions);
-        marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(26.894385, 75.82888700000001)});
-        infowindow = new google.maps.InfoWindow({content:"<b>{{detail.Details.Name}}</b><br/>{{detail.Details.Location}}<br/>" });
-        google.maps.event.addListener(marker, "click", function(){infowindow.open(map,marker);});
-        infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);
-  </script> -->
+	<script type="text/javascript"> 
+      function init_map(){var myOptions = {zoom:14,center:new google.maps.LatLng(26.894385,75.82888700000001),
+      mapTypeId: google.maps.MapTypeId.ROADMAP};
+      map = new google.maps.Map(document.getElementById("googleMap"), myOptions);
+      marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(26.894385, 75.82888700000001)});
+      infowindow = new google.maps.InfoWindow({content:"<b>App Store</b><br/><br/>302004 Jaipur" });
+      google.maps.event.addListener(marker, "click", function(){infowindow.open(map,marker);});
+      infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);
+  </script>
   <script>
 		var config = {
 		    apiKey: "AIzaSyBaDFc5tjkGedptCrsSv__7W7OGaWVKfns",

@@ -112,7 +112,7 @@ h1, h2, h3, h4, h5, h6 {
 	width: 100%;
 }
 .main-full {
-	
+	background: url('http://wallpapercave.com/wp/RjSCmf6.jpg')  no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -120,7 +120,6 @@ h1, h2, h3, h4, h5, h6 {
     height:605px;
 }
 .full {
-	background: url('http://wallpoper.com/images/00/40/74/09/black-minimalistic_00407409.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -328,4 +327,34 @@ h1, h2, h3, h4, h5, h6 {
 .bind{
 	background-color: white;
 	width: 100%;
+}
+.about_area{
+	float: left;
+	display: inline;
+	width: 100%;
+	min-height: 100px;
+}
+.heading{
+	float: left;
+	display: inline;
+	width: 100%;
+}
+.submit_btn {
+  border: 2px solid #fff;
+  color: #fff;
+  margin-top: 12px;
+    
+  padding: 9px 20px;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.submit_btn:hover{
+	background-color: white;
+    
 }
