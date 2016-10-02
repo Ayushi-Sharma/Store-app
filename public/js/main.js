@@ -73,10 +73,8 @@ app.config(function($stateProvider, $urlRouterProvider) {
     getData.on('value', function(data){
         $rootScope.abc = [];
         $rootScope.abc = (data.val());
-        console.log($rootScope.abc);
     });
     $scope.storeDetail = function(name){
-        console.log(name);
         var getDataDetail = firebase.database().ref('Stores/'+name);
         getDataDetail.on('value', function(data){
             $rootScope.abc = [];
@@ -88,13 +86,10 @@ app.config(function($stateProvider, $urlRouterProvider) {
     $timeout(function() {
         var name = $rootScope.storeName
         $scope.value = $rootScope.abc;
-        console.log($scope.value);
     }, 6000);
     $timeout(function() {
         var name = $rootScope.storeName
         $scope.detail = $rootScope.store;
-        console.log($scope.detail);
-    
     }, 10000);
     $scope.load = true;
     $scope.loadingDetails = true;
