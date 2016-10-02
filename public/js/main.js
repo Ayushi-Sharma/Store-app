@@ -73,31 +73,38 @@ app.config(function($stateProvider, $urlRouterProvider) {
     getData.on('value', function(data){
         $rootScope.abc = [];
         $rootScope.abc = (data.val());
+        console.log($scope.abc);
     });
     $scope.storeDetail = function(name){
         var getDataDetail = firebase.database().ref('Stores/'+name);
         getDataDetail.on('value', function(data){
             $rootScope.abc = [];
-            $rootScope.store = (data.val());    
+            $rootScope.store = (data.val()); 
+            console.log($scope.store);   
     });
+    }
+    $scope.showImage = function(image){
+
     }
     
     $scope.value = [];
     $timeout(function() {
         var name = $rootScope.storeName
         $scope.value = $rootScope.abc;
-    }, 6000);
+        console.log($scope.value);
+    }, 40000);
     $timeout(function() {
         var name = $rootScope.storeName
         $scope.detail = $rootScope.store;
-    }, 10000);
+        console.log($scope.detail);
+    }, 40000);
     $scope.load = true;
     $scope.loadingDetails = true;
     $timeout(function(){
         $scope.load = false;
-    }, 10000);
+    }, 40000);
     $timeout(function(){
         $scope.loadingDetails = false;
-    }, 10000);
+    }, 40000);
     
 });

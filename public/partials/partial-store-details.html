@@ -12,8 +12,8 @@
 			</div>
 		</div>
 		<div class="bind">
-			<div class="row" style="height:400px;">
-					<div style="height:auto;" >
+			<div class="row">
+					<div style="height:auto;">
 						<h3>Photo Gallery</h3>
 						 <div class="container-fluid">
 						    <div class="col-md-12">
@@ -21,8 +21,8 @@
 						            <div id="myCarousel" class="carousel slide">
 						                <div class="carousel-inner">
 						                    <div class="item active">    
-						                        <div class="row" ng-repeat='x in detail.Details.Images'>
-						                            <div class="col-sm-2"><img src="data:{{x.filetype}};base64,{{x.base64}}" alt="Image" class="img-responsive">
+						                        <div class="row" >
+						                            <div class="col-sm-2" ng-repeat='x in detail.Details.Images'><img ng-src="data:{{x.filetype}};base64,{{x.base64}}" alt="Image" class="img-responsive fancybox" ng-model='img' ng-click='showImage(img);'>
 						                            </div>
 						                        </div>
 						                    </div>
@@ -37,11 +37,11 @@
 			</div>
 			<div class="row">
 				<div class="col-md-6 no-padding">
-					<div class="left">
+					<div class="left-main">
 						<h3>About Us</h3>
 						<p class="description">{{detail.Details.Description}}</p>
 					</div>
-					<div class="left">
+					<div class="left-main">
 						<h3>Product Range</h3>
 						<div class="productsList" ng-repeat = "x in detail.Details.Products">
 							{{x}}
@@ -49,7 +49,7 @@
 					</div>
 				</div>
 				<div class="col-md-6 no-padding">
-					<div class="right">
+					<div class="right-main">
 						<h3>Store Hours</h3>
 						<div class="container">
 							<div class="row">
